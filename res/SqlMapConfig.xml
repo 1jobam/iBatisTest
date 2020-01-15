@@ -21,6 +21,7 @@
 	형식) <typeAlias alias="alias명" type="클래스의 풀네임"/>
 	 -->
 	<typeAlias alias="memVO" type="kr.or.ddit.basic.MemberVO"/>
+	<typeAlias alias="boVO" type="board.vo.BoardVO"/>
 
 	<!-- 
 	DB와의 연결을 처리하는 부분
@@ -45,6 +46,7 @@
 	형식) <sqlMap resource="경로명/파일명.xml"/> 
 	-->
 	<sqlMap resource="kr/or/ddit/basic/member.xml"/>
+	<sqlMap resource="board/sql/board.xml"/>
 </sqlMapConfig>
 
 

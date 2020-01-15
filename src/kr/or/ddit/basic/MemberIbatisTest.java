@@ -81,7 +81,7 @@ public class MemberIbatisTest {
 				System.out.println("delete 작업 실패!!!");
 			}
 			System.out.println("----------------------------------");
-			/*
+			
 			// 2-4. select 연습
 			// 1) 응답의 결과가 여러개일 경우
 			System.out.println("select 연습시작 (결과가 여러개인 경우)...");
@@ -99,18 +99,18 @@ public class MemberIbatisTest {
 			}
 			System.out.println("출력 끝...");
 			
-			*/
-			// 2) 응답이 1개일 경우
-			System.out.println("select 연습시작(결과가 1개일 경우...");
 			
-			// 응답결과가 1개가 확실할 경우에는 queryForObject메서드를 사용한다.
-			MemberVO mv3 = (MemberVO) smc.queryForObject("memberTest.getMember", "1job");
-			
-			System.out.println("ID : " + mv3.getMem_id());
-			System.out.println("이름 : " + mv3.getMem_name());
-			System.out.println("전화 : " + mv3.getMem_tel());
-			System.out.println("주소 : " + mv3.getMem_addr());
-			System.out.println("출력 끝...");
+//			// 2) 응답이 1개일 경우
+//			System.out.println("select 연습시작(결과가 1개일 경우...");
+//			
+//			// 응답결과가 1개가 확실할 경우에는 queryForObject메서드를 사용한다.
+//			MemberVO mv3 = (MemberVO) smc.queryForObject("memberTest.getMember", "1job");
+//			
+//			System.out.println("ID : " + mv3.getMem_id());
+//			System.out.println("이름 : " + mv3.getMem_name());
+//			System.out.println("전화 : " + mv3.getMem_tel());
+//			System.out.println("주소 : " + mv3.getMem_addr());
+//			System.out.println("출력 끝...");
 			
 		}catch(SQLException e) {
 			e.printStackTrace();
