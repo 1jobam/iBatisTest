@@ -21,6 +21,7 @@
 	형식) <typeAlias alias="alias명" type="클래스의 풀네임"/>
 	 -->
 	<typeAlias alias="memVO" type="kr.or.ddit.basic.MemberVO"/>
+	<typeAlias alias="memVO2" type="kr.or.ddit.member.vo.MemberVO"/>
 	<typeAlias alias="boVO" type="board.vo.BoardVO"/>
 
 	<!-- 
@@ -47,6 +48,7 @@
 	-->
 	<sqlMap resource="kr/or/ddit/basic/member.xml"/>
 	<sqlMap resource="board/sql/board.xml"/>
+	<sqlMap resource="kr/or/ddit/member/sql/member2.xml"/>
 </sqlMapConfig>
 
 

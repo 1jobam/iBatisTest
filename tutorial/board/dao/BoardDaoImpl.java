@@ -41,12 +41,7 @@ public class BoardDaoImpl implements BoardDao{
 			
 			rd.close();
 			
-			BoardVO bvo = new BoardVO();
-			bvo.setBoard_title(bv.getBoard_title());
-			bvo.setBoard_writer(bv.getBoard_writer());
-			bvo.setBoard_content(bv.getBoard_content());
-			
-			obj = smc.insert("board.insertboard", bvo);
+			obj = smc.insert("board.insertboard", bv);
 			
 		
 		}catch(IOException e) {
@@ -69,16 +64,8 @@ public class BoardDaoImpl implements BoardDao{
 			SqlMapClient smc = SqlMapClientBuilder.buildSqlMapClient(rd);
 			
 			rd.close();
-			
-			BoardVO bvo = new BoardVO();
-			
-			bvo.setBoard_no(bv.getBoard_no());
-			bvo.setBoard_title(bv.getBoard_title());
-			bvo.setBoard_writer(bv.getBoard_writer());
-			bvo.setBoard_content(bv.getBoard_content());
-			
-			
-			chk = smc.update("board.updateboard",bvo);
+					
+			chk = smc.update("board.updateboard",bv);
 			
 		}catch(IOException e) {
 			e.printStackTrace();
@@ -100,10 +87,7 @@ public class BoardDaoImpl implements BoardDao{
 			
 			rd.close();
 			
-			BoardVO bvo = new BoardVO();
-			bvo.setBoard_no(bv.getBoard_no());
-			
-			chk = smc.delete("board.deleteboard",bvo);
+			chk = smc.delete("board.deleteboard",bv);
 			
 		}catch(IOException e) {
 			e.printStackTrace();
